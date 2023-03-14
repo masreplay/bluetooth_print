@@ -230,6 +230,8 @@ public class BluetoothPrintPlugin implements FlutterPlugin, ActivityAware, Metho
       ret.put("address", device.getAddress());
       ret.put("name", device.getName());
       ret.put("type", device.getType());
+      ret.put("deviceClass", device.getBluetoothClass().getDeviceClass());
+      ret.put("majorDeviceClass", device.getBluetoothClass().getMajorDeviceClass());
       devices.add(ret);
     }
 
@@ -282,6 +284,8 @@ public class BluetoothPrintPlugin implements FlutterPlugin, ActivityAware, Metho
     ret.put("address", device.getAddress());
     ret.put("name", device.getName());
     ret.put("type", device.getType());
+    ret.put("deviceClass", device.getBluetoothClass().getDeviceClass());
+    ret.put("majorDeviceClass", device.getBluetoothClass().getMajorDeviceClass());
 
     activity.runOnUiThread(
             new Runnable() {
