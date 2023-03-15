@@ -10,6 +10,8 @@ class BluetoothDevice {
   String? address;
   int? type = 0;
   bool? connected = false;
+  int? deviceClass;
+  int? majorDeviceClass;
 
   factory BluetoothDevice.fromJson(Map<String, dynamic> json) =>
       _$BluetoothDeviceFromJson(json);

@@ -11,7 +11,9 @@ BluetoothDevice _$BluetoothDeviceFromJson(Map<String, dynamic> json) {
     ..name = json['name'] as String?
     ..address = json['address'] as String?
     ..type = json['type'] as int?
-    ..connected = json['connected'] as bool?;
+    ..connected = json['connected'] as bool?
+    ..deviceClass = json['deviceClass'] as int?
+    ..majorDeviceClass = json['majorDeviceClass'] as int?;
 }
 
 Map<String, dynamic> _$BluetoothDeviceToJson(BluetoothDevice instance) {
@@ -27,6 +29,8 @@ Map<String, dynamic> _$BluetoothDeviceToJson(BluetoothDevice instance) {
   writeNotNull('address', instance.address);
   writeNotNull('type', instance.type);
   writeNotNull('connected', instance.connected);
+  writeNotNull('deviceClass', instance.deviceClass);
+  writeNotNull('majorDeviceClass', instance.majorDeviceClass);
   return val;
 }
 
